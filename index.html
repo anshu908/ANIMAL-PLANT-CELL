@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Cell and Plant Cell</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            animation: slideInDown 1s ease-out;
+        }
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .cell-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 1rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .cell-card:nth-child(1) {
+            animation-delay: 0.5s;
+        }
+        .cell-card:nth-child(2) {
+            animation-delay: 1s;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .cell-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .cell-card img:hover {
+            transform: scale(1.1);
+        }
+        .cell-card h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .cell-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+            animation: fadeIn 2s ease-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Understanding Animal and Plant Cells</h1>
+    </header>
+    <div class="container">
+        <!-- Animal Cell -->
+        <div class="cell-card">
+            <img src="https://envs.sh/11S.jpg" alt="Animal Cell">
+            <h2>Animal Cell</h2>
+            <p>
+                The animal cell is a eukaryotic cell that contains membrane-bound organelles.
+                Key components include the nucleus, mitochondria, endoplasmic reticulum, Golgi apparatus, and lysosomes.
+                Animal cells lack a cell wall but have a flexible plasma membrane.
+            </p>
+        </div>
+
+        <!-- Plant Cell -->
+        <div class="cell-card">
+            <img src="https://envs.sh/11q.jpg" alt="Plant Cell">
+            <h2>Plant Cell</h2>
+            <p>
+                The plant cell is also a eukaryotic cell but differs from animal cells by having a rigid cell wall, chloroplasts,
+                and a large central vacuole. These features support photosynthesis and provide structural support.
+            </p>
+        </div>
+    </div>
+    <footer>
+        &copy; MD MEMORIAL ACADEMY  | MAKE BY ANSH 
+    </footer>
+</body>
+</html>
